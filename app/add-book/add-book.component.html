@@ -1,0 +1,31 @@
+
+<div class="contaner">
+    <div style="display: flex;flex-direction: column;gap: 13px;">
+        <div>Add Bookmark</div>
+    
+       <div>
+    
+        <form [formGroup]="loginForm"  (ngSubmit)="onSubmit()">
+            <!-- <form [formGroup]="loginForm"  (ngSubmit)="onSubmit()"> -->
+            <input style="width:100%;"  type="text"  placeholder="Title" formControlName="title">
+            <br><br>
+            <input style="width:100%;"  type="text"  placeholder="Url" formControlName="url">
+            <br><br>
+            <select style="width:100%;" formControlName="category" >
+                <option value="categoryA">Category A</option>
+                <option value="categoryB">Category B</option>
+                
+              </select>
+            <br><br>
+            <a mat-icon-button (click)="close()">
+                close
+              </a>
+            <button type="submit">save</button>
+        
+            
+        
+        </form>
+    
+       </div>
+        <div>
+        </div>
